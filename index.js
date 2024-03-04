@@ -8,6 +8,8 @@ for (let index = 0; index < buttonsEl.length; index++) {
       clear_result();
     } else if (buttonValue === "=") {
       calculate_result();
+    } else if (buttonValue === "⌫") {
+      delete_value(buttonValue);
     } else {
       append_value(buttonValue);
     }
@@ -20,11 +22,20 @@ function clear_result() {
 
 function calculate_result() {
   try {
-    inputEl.value = eval(inputEl.value);
+    let resEl = eval(inputEl.value);
+    if (resEl === undefined) {
+      inputEl.value = "";
+    } else {
+      // inputEl.value = eval(inputEl.value);
+      inputEl.value = resEl;
+    }
   } catch (error) {
     inputEl.value = "error";
   }
 }
-function append_value(input) {
-  inputEl.value += input;
+function append_value(buttonValue) {
+  inputEl.value += buttonValue;
+}
+function delete_value(buttonValue) {
+  inputEl.value = inputEl.value.slice(0, -1);
 }

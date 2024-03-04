@@ -64,6 +64,19 @@ button:hover {
 
 .equal {
   background-color: #01ff70;
-  grid-row: span 3;
+  grid-row: span 2;
   color: #fff;
+}
+.delete {
+  background-color: hsl(0, 0%, 30%);
+  color: white;
+  grid-column: span 2;
+  font-size: 1rem;
+}
+
+.delete:hover {
+  background-color: hsl(0, 0%, 45%);
+}
+.delete:active {
+  background-color: hsl(0, 0%, 60%);
 }
