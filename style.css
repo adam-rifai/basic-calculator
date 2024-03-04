@@ -46,3 +46,24 @@ button {
 button:hover {
   background-color: #ddd;
 }
+.clear {
+  background-color: #ff4136;
+  color: #fff;
+}
+
+.number,
+.decimal {
+  background-color: #fff;
+  color: #333;
+}
+
+.operator {
+  background-color: #0074d9;
+  color: #fff;
+}
+
+.equal {
+  background-color: #01ff70;
+  grid-row: span 3;
+  color: #fff;
+}
